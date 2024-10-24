@@ -4,8 +4,8 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-# Enable CORS for all routes
-CORS(app)
+# Enable CORS for all routes and allow all origins
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 # Define a route for recommendations
